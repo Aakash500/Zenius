@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+h3{
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pan{
+  width: 60%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ee7716;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:rgb(255, 136, 0);
+}
+
+button:disabled {
+    background-color: #cccccc; /* Gray */
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.navbar{
+width: 100%;
+background-color: #ffffff;
+padding: 0;
+overflow: auto;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin-left: 2%;
+}
+
+body{
+background-image: linear-gradient(rgba(159, 25, 119, 0.594), rgba(52, 84, 179, 0.589));
+height: 100vh;
+}
+*{
+  /* border: 1px solid red; */
+}
+.flexbox{
+  display: flex;
+  justify-content: space-between;
+}
+span{
+  font-family: sans-serif;
+  font-size: small;
+  color: red;
+}
+</style>
+
+</head>
+<body>
+  <div class="navbar">
+    <img class="logo" src="logo\PHOTO-2024-04-30-11-23-33.jpg" alt="">
+  </div>
+     <div class="container">
+      <h3>Zenius Credit Card</h3>
+         <form id="contact-form">
+             <div class="form-group">
+                 <label for="name">Name:</label>
+                 <input type="text" id="name" name="name" required>
+             </div>
+             <div class="form-group">
+                 <label for="email">Email:</label>
+                 <input type="email" id="email" name="email" required>
+             </div>
+             <div class="form-group"> 
+                 <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" maxlength="10" onblur="validatePhone()" required>
+                <span id="phoneError" class="error"></span>
+             </div>
+
+             <div class="flexbox">
+              <div class="form-group pan">
+                <label for="pan">PAN Number</label>
+                <input type="text" id="pan" name="pan" maxlength="10" onblur="validatePAN()" required>
+                <span id="panError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="employment">Employment Status:</label>
+              <select id="employment" name="employment">
+                  <option value="self_employed">Self Employed</option>
+                  <option value="salaried">Salaried</option>
+              </select>
+            </div>
+             </div>
+
+             <button type="submit" id="submitBtn" disabled>Submit</button>
+         </form>
+     </div>
+     <div id="bankList" style="display: none;">
+      <h1>List of Indian Banks</h1>
+      <ul>
+          <li><a href="https://apply.standardchartered.co.in/credit-card/diy-journey-tps/?dt=credtps_43&CID=internal_edm_prb_mgm_feb24&utm_source=Credilio&utm_medium=Marketing&utm_content=ORG01293" target="_blank">Standard Chartered Bank</a></li>
+          <li><a href="https://applyonline.hdfcbank.com/cards/credit-cards.html?utm_content=DGPI&Channel=DSA&DSACode=XBSN&SMCode=J8380&LGCode=DGPI&LCCode=XBSN&LC2=BKJ048#nbb" target="_blank">HDFC Bank</a></li>
+          <li><a href="https://web.axisbank.co.in/DigitalChannel/WebForm/?ipa143&axisreferralcode=C0013176" target="_blank">Axis Bank</a></li>
+          <li><a href="https://cconboarding.aubank.in/auccself/?utm_source=dsa&utm_medium=display_agg&utm_campaign=credit-card-dsa-campaign-989908-242573-C0013176" target="_blank">AU Bank</a></li>
+          <li><a href="https://forms.gle/RdiwwthwekDxG3DAA" target="_blank">IDFC Bank</a></li>
+          <li><a href="https://forms.gle/RdiwwthwekDxG3DAA" target="_blank">SBI</a></li>
+          <li><a href="https://induseasycredit.indusind.com/grid/home" target="_blank">Indusind bank</a></li>
+          <li><a href="https://credit-card.mymoneymantra.com/?sms=false&utm_source=unicc&utm_medium=mmm&utm_campaign=unicc-mmm-50263" target="_blank">HSBC</a></li>
+        </ul>
+      </div>
+     <script src="script.js"></script>
+</body>
+</html>
